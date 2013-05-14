@@ -64,7 +64,7 @@ module Geocoder::Lookup
     def query_url_params(query)
       {
         :location => query.sanitized_text,
-        :flags => "JXTSR",
+        :flags => "JXTRG",
         :gflags => "AC#{'R' if query.reverse_geocode?}",
         :locale => "#{configuration.language}_US",
         :appid => configuration.api_key
